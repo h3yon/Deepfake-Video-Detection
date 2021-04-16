@@ -20,7 +20,7 @@ Used Models are AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, X
 
 2. Download python code for converting videos to images
 
-- We used some codes in ![Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
+- We used some codes in [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
 - To extract frames, used python codes are
   **extract_faces*.py, res10_300x300_ssd_iter_140000.caffemodel, search_videos_in_directory*.py**.
   Additionaly, We changed code search\*.py.
@@ -45,20 +45,27 @@ Used Models are AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, X
    ```
    <div></div>
 
-### Preprocessing
+### Preprocessing Requirements
 
 ```
-deploy.prototxt.txt           real_test1
-real_train                    extract_faces_keep_in_mem.py
-real_train1                   extract_faces.py
-requirements.txt              fake_test
+deploy.prototxt.txt           extract_faces_keep_in_mem.py
+extract_faces.py              requirements.txt
 res10_300x300_ssd_iter_140000.caffemodel
-fake_test1                    fake_train
 search_videos_in_directory_keep_in_mem.py
-fake_train1                   search_videos_in_directory.py
-real_test
+search_videos_in_directory.py
 ```
 
 extract*.py, res*.coffeemodel, search\_\*.py, deploy.proto\*.txt are from [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
-
 we changed search_videos\*.py
+
+### Start Experiments
+```
+1. Preprocessing 
+$ python3 search_videos_in_directory.py
+-> input directory: (your dataset path)
+-> output directory: ex) fake_test or fake_train or real_test or real_train 
+-> video files: 50 #Each video was cut into 50 frames.
+2. python VGG16.py
+-> You can use AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, Xception
+3. Get AUROC, Accuracy, f1-score
+```

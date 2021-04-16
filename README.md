@@ -4,11 +4,11 @@ We used DFDC, FaceForensics++, Celeb-DF datasets.
 In this project, the performance on detection was compared and analyzed using color channels.
 Used Models are AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, Xception.
 
-### Progress
+### 1. Progress
 
 ![Progress](./progress.png)
 
-### How to start?
+### 2. How to start?
 
 1. Download Datasets
 
@@ -45,7 +45,7 @@ Used Models are AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, X
    ```
    <div></div>
 
-### Preprocessing Requirements
+### 3. Preprocessing Requirements
 
 ```
 deploy.prototxt.txt           extract_faces_keep_in_mem.py
@@ -58,7 +58,7 @@ search_videos_in_directory.py
 extract*.py, res*.coffeemodel, search\_\*.py, deploy.proto\*.txt are from [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
 we changed search_videos\*.py
 
-### Start Experiments
+### 4. Start Experiments
 ```
 1. Preprocessing 
 $ python3 search_videos_in_directory.py

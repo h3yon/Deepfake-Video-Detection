@@ -1,8 +1,9 @@
 # Deepfake Video Detection
+In this project, the performance on detection was compared and analyzed using color channels.  
 
-We used DFDC, FaceForensics++, Celeb-DF datasets.
-In this project, the performance on detection was compared and analyzed using color channels.
-Used Models are AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, Xception.
+사용한 dataset: DFDC, FaceForensics++, Celeb-DF
+사용된 model: AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, Xception
+
 
 ### 1. Progress
 
@@ -47,25 +48,25 @@ Used Models are AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, X
 
 ### 3. Preprocessing Requirements
 
-```
-deploy.prototxt.txt           extract_faces_keep_in_mem.py
-extract_faces.py              requirements.txt
-res10_300x300_ssd_iter_140000.caffemodel
-search_videos_in_directory_keep_in_mem.py
-search_videos_in_directory.py
-```
+   ```
+   deploy.prototxt.txt           extract_faces_keep_in_mem.py
+   extract_faces.py              requirements.txt
+   res10_300x300_ssd_iter_140000.caffemodel
+   search_videos_in_directory_keep_in_mem.py
+   search_videos_in_directory.py
+   ```
 
-extract*.py, res*.coffeemodel, search\_\*.py, deploy.proto\*.txt are from [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
-we changed search_videos\*.py
+   extract*.py, res*.coffeemodel, search\_\*.py, deploy.proto\*.txt are from [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
+   we changed search_videos\*.py
 
 ### 4. Start Experiments
-```
-1. Preprocessing 
-$ python3 search_videos_in_directory.py
--> input directory: (your dataset path)
--> output directory: ex) fake_test or fake_train or real_test or real_train 
--> video files: 50 #Each video was cut into 50 frames.
-2. python VGG16.py
--> You can use AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, Xception
-3. Get AUROC, Accuracy, f1-score
-```
+   ```
+   1. Preprocessing 
+   $ python3 search_videos_in_directory.py
+   -> input directory: (your dataset path)
+   -> output directory: ex) fake_test or fake_train or real_test or real_train 
+   -> video files: 50 #Each video was cut into 50 frames.
+   2. python VGG16.py
+   -> You can use AlexNet, DenseNet, InceptionResNetV2, MesoNet, ResNet152, VGG, Xception
+   3. Get AUROC, Accuracy, f1-score
+   ```

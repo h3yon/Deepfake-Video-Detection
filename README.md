@@ -39,8 +39,8 @@ In this project, the performance on detection was compared and analyzed using co
 
 - We used some codes in [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes)
 - To extract frames, used python codes are
-  **extract_faces*.py, res10_300x300_ssd_iter_140000.caffemodel, search_videos_in_directory*.py**.
-  Additionaly, We changed code search\*.py.
+  `extract_faces.py, res10_300x300_ssd_iter_140000.caffemodel, search_videos_in_directory.py`.
+  Additionaly, We changed code `search.py`.
 
 3. Download Requirements.txt and download requirements.
 

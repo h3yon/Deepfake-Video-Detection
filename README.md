@@ -72,7 +72,7 @@ In this project, the performance on detection was compared and analyzed using co
    search_videos_in_directory.py
    ```
 
-   extract*.py, res*.coffeemodel, search\_\*.py, deploy.proto\*.txt are from [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes).  
+   `extract*.py, res*.coffeemodel, search\_\*.py, deploy.proto\*.txt` are from [Debanik/Detecting-Deepfakes](https://github.com/Debanik/Detecting-Deepfakes).  
    we changed search_videos\*.py
 
 ## 4. Start Experiments

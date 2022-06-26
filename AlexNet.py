@@ -128,18 +128,6 @@ model.compile(loss='binary_crossentropy',
 model.summary()
 
 
-# In[22]:
-
-
-#Currently not used
-callback_list = [EarlyStopping(monitor='val_accuracy', min_delta=0,
-                               patience=2,
-                               verbose=0, mode='auto')]
-
-
-history = model.fit_generator(train_generator, validation_data=validation_generator, epochs = EPOCHS, validation_steps=len(validation_generator),callbacks=callback_list)
-
-
 # In[23]:
 data_dir = '/home/khykhy1006/pbl/CD_Gray/gray_final_dataset/test_dataset'
 
@@ -155,8 +143,7 @@ test_generator = test_datagen.flow_from_directory(data_dir,
                                                   class_mode='categorical')
 
 output = model.predict(test_generator, steps=len(test_generator), verbose=1)
-np.set_printoptions(formatter={'float': lambda x: "{0:0.3f}".format(x)})
-#print(test50_generator.class_indices)
+
 print(output)
 
 output_score50 = []
